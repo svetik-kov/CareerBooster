@@ -1,38 +1,40 @@
 import * as Dialog from "@radix-ui/react-dialog"
 import { Cross2Icon } from "@radix-ui/react-icons"
-import styles from "./ModalRadix.module.css"
+import s from "./ModalRadix.module.css"
 
 export const ModalRadix = () => (
   <Dialog.Root>
     <Dialog.Trigger asChild>
-      <button className={`${styles.Button} violet`}>Edit profile</button>
+      <button className={`${s.Button} violet`}>Delete props</button>
     </Dialog.Trigger>
     <Dialog.Portal>
-      <Dialog.Overlay className={styles.Overlay} />
-      <Dialog.Content className={styles.Content}>
-        <Dialog.Title className={styles.Title}>Edit profile</Dialog.Title>
-        <Dialog.Description className={styles.Description}>
-          Make changes to your profile here. Click save when you're done.
-        </Dialog.Description>
-        <fieldset className={styles.Fieldset}>
-          <label className={styles.Label} htmlFor="name">
+      <Dialog.Overlay className={s.Overlay} />
+      <Dialog.Content className={s.Content}>
+        <Dialog.Title className={s.Title}>Delete Post</Dialog.Title>
+        <hr />
+        <Dialog.Description className={s.Description}>Are you sure you want to delete this post?</Dialog.Description>
+        {/*  <fieldset className={s.Fieldset}>
+          <label className={s.Label} htmlFor="name">
             Name
           </label>
-          <input className={styles.Input} id="name" defaultValue="Pedro Duarte" />
+          <input className={s.Input} id="name" defaultValue="Pedro Duarte" />
         </fieldset>
-        <fieldset className={styles.Fieldset}>
-          <label className={styles.Label} htmlFor="username">
+        <fieldset className={s.Fieldset}>
+          <label className={s.Label} htmlFor="username">
             Username
           </label>
-          <input className={styles.Input} id="username" defaultValue="@peduarte" />
-        </fieldset>
-        <div style={{ display: "flex", marginTop: 25, justifyContent: "flex-end" }}>
-          <Dialog.Close asChild>
-            <button className={`${styles.Button} green`}>Save changes</button>
-          </Dialog.Close>
-        </div>
+          <input className={s.Input} id="username" defaultValue="@peduarte" />
+        </fieldset>*/}
+
         <Dialog.Close asChild>
-          <button className={styles.IconButton} aria-label="Close">
+          <button className={`${s.Button} violet`}>Yes</button>
+        </Dialog.Close>
+        <Dialog.Close asChild>
+          <button className={`${s.Button} green`}>No</button>
+        </Dialog.Close>
+
+        <Dialog.Close asChild>
+          <button className={s.IconButton} aria-label="Close">
             <Cross2Icon />
           </button>
         </Dialog.Close>
